@@ -31,8 +31,10 @@ Named Parameters:
 - id: Optional -- the ID for the <figure> element
 */}}
 
-<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}
-    {{- with .Get "id" }} id="{{ . }}"{{ end }}>
+<figure
+    {{- with .Get "class" }} class="{{ . }}"{{ end -}}
+    {{- with .Get "id" }} id="{{ . }}"{{ end -}}
+>
     {{- /* Remove redundant newline characters to prevent <figcaption>
            from being wrapped in <p>, which is invalid HTML because
            <figcaption> must be a direct child of <figure> */}}
