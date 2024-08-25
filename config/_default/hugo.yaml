@@ -18,6 +18,11 @@ cascade:
     url: 'collections'
 
   - _target:
+      path: '/collections/*'
+    # Do not use the 'permalinks.section.collections' URL pattern
+    url: ':sections[:2]'
+
+  - _target:
       path: '/collections{,/**}'
       kind: 'section'
     outputs:
