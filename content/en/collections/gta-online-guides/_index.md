@@ -1,6 +1,5 @@
 ---
 title: "GTA Online Guides"
-url: "collections/gta-online-guides"
 tags:
   - GTA Online
 toc: false

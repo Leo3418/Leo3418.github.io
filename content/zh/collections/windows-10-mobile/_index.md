@@ -1,6 +1,5 @@
 ---
 title: "Windows 10 Mobile 系列文章"
-url: "collections/windows-10-mobile"
 license: false
 date: 2020-04-23
 categories: []
