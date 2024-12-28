@@ -17,9 +17,7 @@
 {{- define "partials/head-cacheable.html" }}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{{- $style := resources.Get "sass/main.scss"
-    | resources.ToCSS | resources.Minify | resources.Fingerprint
-}}
+{{- $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}"
       integrity="{{ $style.Data.Integrity }}">
 {{- partial "LoadCSSIfPresent.html" "static/css/syntax.css" }}

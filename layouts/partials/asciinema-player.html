@@ -2,6 +2,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.css" integrity="sha256-GMIhu5Hnb2yvE2Ap29EPBTncrR45rZV4dFJ67VY37oY=" crossorigin="anonymous">
 
 {{- $style := resources.Get "sass/asciinema-player-custom.scss"
-    | resources.ToCSS | resources.Minify | resources.Fingerprint
-}}
+    | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
